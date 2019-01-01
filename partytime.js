@@ -34,6 +34,8 @@ const displayTime = () => {
 
     if (nonFighting.checked && parseInt(hrs) >= 13) time = padWithZero(parseInt(hrs) - 12) + ":" + padWithZero(mins) + ":" + padWithZero(secs) + " PM";
 
+    else if (nonFighting.checked && parseInt(hrs) === 12) time = parseInt(hrs) + ":" + + padWithZero(mins) + ":" + padWithZero(secs) + " PM";
+
     else if (nonFighting.checked && parseInt(hrs) !== 0) time = padWithZero(hrs) + ":" + padWithZero(mins) + ":" + padWithZero(secs) + " AM";
 
     else if (nonFighting.checked && parseInt(hrs) === 0) time = "12:" + padWithZero(mins) + ":" + padWithZero(secs) + " AM";
