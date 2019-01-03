@@ -13,7 +13,7 @@ let imageIdx = 0;
 
 
 
-
+// comment for git
 
 const displayTime = () => {
     let today = new Date();
