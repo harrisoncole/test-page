@@ -59,17 +59,17 @@ const displayTime = () => {
 
 
 
-const changeImage = () => {
+function changeImage(){
     
     let imgArr = ['ash.jpeg', 'ashAndPikachu.jpeg', 'evee.jpeg', 'mainGang.jpeg', 'mainGangEvolved.jpeg', 'pikachu.jpeg']
     
-        myHeading.innterHTML = 'button clicked!';
+    let pic = document.getElementById('pokemon');
     
-        let nextImage = imageArr[imageIdx];
+        let nextImage = imgArr[imageIdx];
         let altName = nextImage.slice(0,nextImage.indexOf("."));
-        
-        document.getElementById('pokemon').src = nextImage;   
-        document.getElementById('pokemon').alt = altName;
+        console.log(nextImage, altName);
+        pic.src = `pictures/${nextImage}`;   
+        pic.alt = altName;
     
     imageIdx++;
     
